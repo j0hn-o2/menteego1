@@ -1,17 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import image1 from '../assets/image-1.png'; // Adjust the path as necessary
 import './landingpage.css'; // Assuming you have a CSS file for styling
 import image2 from '../assets/image-2.jpg'; 
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+
 
 function LandingPage() {
+
+    const navigate = useNavigate();
     const handleCreateAccountClick = () => {
     navigate('selectusertype');
     }
 
-    const navigate = useNavigate();
+    
   return (
     <div className="landing-page">
         <div className="container">
