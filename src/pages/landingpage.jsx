@@ -18,41 +18,39 @@ function LandingPage() {
   return (
     <div className="landing-page">
         <div className="container">
-            {/* <div className="page-content"> */}
                 <div className="section1">
-                    {/* <div className="section1-content"> */}
-                        {/* <div className="dark-overlay"></div> */}
                     <div className="section1-text">
-                        <h2> FIND THE RIGHT MENTOR FOR YOU</h2>
+                        <h2> Find the right mentor for you</h2>
                         <p>
                         <br/>Connect with expereienced mentors for guidance and support in your personal and professional growth. 
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero culpa soluta, alias repellendus officiis 
                         sunt delectus numquam sapiente quae ab corporis doloribus, id nihil odit porro odio nulla reprehenderit deleniti.
                         </p>
+
+                        <div className='section1-buttons'>
+                            <br/><button className='section1-login'>Login</button>
+                            <button onClick={handleCreateAccountClick} className='section1-create'>Create Account</button>
+                        </div>
                         
-                        <br/><button className='section1-login'>Login</button>
-                        <button onClick={handleCreateAccountClick} className='section1-login'>Create Account</button>
+                        
                     </div>
-                    <div className="section1-image">
+                    {/* <div className="section1-image">
                         <img src={image2} alt="Image" />
                     
-                    </div>
+                    </div> */}
                     {/* </div> */}
 
                 </div>
 
                 <div className="section2">
-                    <div className="section2-content">
                         <div className="section2-header">
                             <h2>FEATURES</h2>
                         </div>
 
                         <div className="section2-features">
-                            {/* <div className="dark-overlay"></div> */}
 
                             <div className="section2-feature1">
-                                {/* <div className="dark-overlay"></div> */}
-                                
+
                                 <div className="section2-image">
                                     <img src={image1} alt="Image" />       
                                 </div>
@@ -68,14 +66,13 @@ function LandingPage() {
 
                             </div>
                     
-                            <div className="section2-feature3">
-                                {/* <div className="dark-overlay"></div> */}
+                            <div className="section2-feature2">
                                 <div className="section2-image">
                                     <img src={image1} alt="Image" />
 
                                 </div>
 
-                                <div className="section2-feature3-text">
+                                <div className="section2-feature2-text">
                                     <h3>JOIN DISCUSSION GROUPS</h3>    
 
                                     <p>
@@ -85,12 +82,14 @@ function LandingPage() {
 
                                 </div>
                             </div>
-                        </div>
+                            
+                            <div className="section2-feature3">
 
-                        <div className="last-feature">
-                            <div className="section2-feature2">
-                                {/* <div className="dark-overlay"></div> */}
-                                <div className="section2-feature2-text">
+                                <div className="section2-image">
+                                    <img src={image1} alt="Image" />
+
+                                </div>
+                                <div className="section2-feature3-text">
                                     <h3>
                                     ATTEND MENTOR SESSIONS AND PARTICIPATE IN DISCUSSIONS
                                     </h3>
@@ -98,15 +97,10 @@ function LandingPage() {
                                     <br/>Participating in discussions and attending sessions will gain you certificates and badges on your profile.
                                     </p>
                                 </div>
-                        
-                                <div className="section2-image">
-                                    <img src={image1} alt="Image" />
-
-                                </div>
                             </div>
 
+
                         </div>
-                    </div>
                 </div>
 
                 <div className="section3">
