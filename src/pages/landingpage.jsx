@@ -13,6 +13,9 @@ function LandingPage() {
     const handleCreateAccountClick = () => {
     navigate('selectusertype');
     }
+    const handleLoginClick = () => {
+    navigate('/selectlogintype');
+    }
 
     
   return (
@@ -28,7 +31,7 @@ function LandingPage() {
                         </p>
 
                         <div className='section1-buttons'>
-                            <br/><button className='section1-login'>Login</button>
+                            <br/><button onClick={handleLoginClick} className='section1-login'>Login</button>
                             <button onClick={handleCreateAccountClick} className='section1-create'>Create Account</button>
                         </div>
                         

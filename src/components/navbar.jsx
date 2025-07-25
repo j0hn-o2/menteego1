@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,NavLink } from 'react-router-dom';
 import './navbar.css'; // Assuming you have a CSS file for styling
 import menteegologo from '../assets/image.png'; // Adjust the path as necessary
 
@@ -11,9 +11,12 @@ function Navbar(){
             <img src={menteegologo} alt="MenteeGo Logo" className="logo" />
 
             <div className="nav-links">
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/login">Login</Link>
+                <NavLink to="/" className={({ isActive }) =>
+    isActive ? 'nav-link active' : 'nav-link'}>Home</NavLink>
+                <NavLink to="/about" className={({ isActive }) =>
+    isActive ? 'nav-link active' : 'nav-link'}>About</NavLink>
+                <NavLink to="/selectlogintype" className={({ isActive }) =>
+    isActive ? 'nav-link active' : 'nav-link'}>Login</NavLink>
             </div>
             </div>
             

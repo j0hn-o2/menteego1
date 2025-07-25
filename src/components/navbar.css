@@ -48,6 +48,12 @@
     margin-top: 20px;
 }
 
+.nav-link.active {
+  color: #4f46e5; /* Active color */
+  font-weight: bold;
+  border-bottom: 2px solid #4f46e5;
+}
+
 /* @media (max-width: 768px) {
   .nav-links {
     position: absolute;
