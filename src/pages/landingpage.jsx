@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import image1 from '../assets/image-1.png'; // Adjust the path as necessary
 import './landingpage.css'; // Assuming you have a CSS file for styling
-import image2 from '../assets/image-2.jpg'; 
 import { Link } from 'react-router-dom';
+// import image1 from '../assets/image-1.png'; 
+// import image2 from '../assets/image-2.jpg'; 
 
 
 function LandingPage() {
@@ -20,32 +20,25 @@ function LandingPage() {
     
   return (
     <div className="landing-page">
-        <div className="container">
-                <div className="section1">
-                    <div className="section1-text">
-                        <h2> Find the right mentor for you</h2>
-                        <p>
-                        <br/>Connect with expereienced mentors for guidance and support in your personal and professional growth. 
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero culpa soluta, alias repellendus officiis 
-                        sunt delectus numquam sapiente quae ab corporis doloribus, id nihil odit porro odio nulla reprehenderit deleniti.
-                        </p>
+        <div className="section1">
+            <div className="section1-text">
+                <h1> Find The Right Mentor For You</h1>
+                <p>
+                    Connect with expereienced mentors for guidance and support in your personal and professional growth. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Libero culpa soluta, alias repellendus officiis 
+                    sunt delectus numquam sapiente quae ab corporis doloribus, id nihil odit porro odio nulla reprehenderit deleniti.
+                </p>
+            </div>
 
-                        <div className='section1-buttons'>
-                            <br/><button onClick={handleLoginClick} className='section1-login'>Login</button>
-                            <button onClick={handleCreateAccountClick} className='section1-create'>Create Account</button>
-                        </div>
+            <div className='section1-buttons'>
+                <button onClick={handleLoginClick} className='section1-login'>Login</button>
+                <button onClick={handleCreateAccountClick} className='section1-create'>Create Account</button>
+            </div>
                         
-                        
-                    </div>
-                    {/* <div className="section1-image">
-                        <img src={image2} alt="Image" />
-                    
-                    </div> */}
-                    {/* </div> */}
+        </div>
 
-                </div>
 
-                <div className="section2">
+                {/* <div className="section2">
                         <div className="section2-header">
                             <h2>FEATURES</h2>
                         </div>
@@ -107,7 +100,7 @@ function LandingPage() {
                 </div>
 
                 <div className="section3">
-                    {/* <div className="section3-content"> */}
+                    <div className="section3-content">
                     <div className="section3-header">
                         <h2>HEAR FROM OUR ALUMNI</h2>
                     </div>
@@ -174,10 +167,10 @@ function LandingPage() {
 
                         </div>
                     </div>
-                    {/* </div> */}
-                </div>
+                    </div>
+                </div> */}
             {/* </div> */}
-        </div>          
+                
 
     </div>
         
