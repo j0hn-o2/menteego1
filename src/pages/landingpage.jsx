@@ -121,31 +121,78 @@ function LandingPage() {
         <div className="section4">
             <div className="section4-header">
                 <h2>HEAR FROM OUR ALUMNI</h2>
-            </div>
+            </div> 
 
-            <div className="section4-reviews">
+            <div className="section4-review">
                 <div className="review1">
-                    <div className="review-text">
+                    <div className="review1-text">
+
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                             Quidem voluptatum sit accusantium eos mollitia ducimus nobis quod nihil. Eius nemo necessitatibus, exercitationem labore itaque expedita 
                             officia enim veritatis maiores fugit corporis molestiae iure, dicta quis minima. Doloribus praesentium dolorum perspiciatis, 
                             beatae asperiores tenetur nemo reiciendis vitae est ratione nostrum! Et?
                         </p>
+
                     </div>
-                    <div className="review-profile">
-                        <div className="review-image">
-                            {/* <img src={image1} alt="Image" /> */}
+                    <div className="review1-profile">
+                        <div className="review1-image">
+                            <img src={image1} alt="Image" />
                         </div>
-                        <div>
-                            John Doe
-                            Software Engineer
+                        <div className='review1-name'>
+                            <p>John Doe</p>
+                            <p className='name-role'>Software Engineer</p>
                         </div>
-                            
-                        
                     </div>
                 </div>
+
+
+                <div className="review2">
+                    <div className="review2-text">
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quidem voluptatum sit accusantium eos mollitia ducimus nobis quod nihil. Eius nemo necessitatibus, exercitationem labore itaque expedita 
+                            officia enim veritatis maiores fugit corporis molestiae iure, dicta quis minima. Doloribus praesentium dolorum perspiciatis, 
+                            beatae asperiores tenetur nemo reiciendis vitae est ratione nostrum! Et?
+                        </p>
+
+                    </div>
+                    <div className="review2-profile">
+                        <div className="review2-image">
+                            <img src={image1} alt="Image" />
+                        </div>
+                        <div className='review2-name'>
+                            <p>John Doe</p>
+                            <p className='name-role'>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="review3">
+                    <div className="review3-text">
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quidem voluptatum sit accusantium eos mollitia ducimus nobis quod nihil. Eius nemo necessitatibus, exercitationem labore itaque expedita 
+                            officia enim veritatis maiores fugit corporis molestiae iure, dicta quis minima. Doloribus praesentium dolorum perspiciatis, 
+                            beatae asperiores tenetur nemo reiciendis vitae est ratione nostrum! Et?
+                        </p>
+
+                    </div>
+                    <div className="review3-profile">
+                        <div className="review3-image">
+                            <img src={image1} alt="Image" />
+                        </div>
+                        <div className='review3-name'>
+                            <p>John Doe</p>
+                            <p className='name-role'>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+                        
         </div>
 
                 {/* <div className="section3">
