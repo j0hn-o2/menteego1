@@ -25,6 +25,7 @@ function AppContent() {
   ];
 
   const hideFooterRoutes = [
+    '/',
     '/selectlogintype',
     '/loginmentor',
     '/loginmentee',
