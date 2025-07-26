@@ -1,17 +1,28 @@
 .select-user-type {
-    background-color: #f0f0f0;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    /* height: 500px; */
-    align-items: center;
+    background-color: white;
+    padding: 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-h2 {
-    text-align: center;
-    /* margin-bottom: 20px; */
+.select-user-type-logo {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.select-user-type-logo img {
+    width: 700px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.select-user-type h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: #4f46e5;
 }
 
 .user-type-options {

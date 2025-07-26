@@ -18,6 +18,7 @@ function AppContent() {
 
   // Define separately the routes where you want to hide the navbar and footer
   const hideNavbarRoutes = [
+    '/selectusertype',
     '/creatementeeaccount',
     '/creatementoraccount',
     '/loginmentor',
@@ -26,6 +27,7 @@ function AppContent() {
 
   const hideFooterRoutes = [
     // '/',
+    '/selectusertype',
     '/selectlogintype',
     '/loginmentor',
     '/loginmentee',
