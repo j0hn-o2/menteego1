@@ -12,7 +12,7 @@ function SelectLoginType() {
     };
   return (
     <div className="select-login-type">
-      <h1>Select Login Type</h1>
+      <h1>Login As?</h1>
       <div className="login-options">
         <button onClick={handleMentorLogin} className="mentor-login">Mentor</button>
         <button onClick={handleMenteeLogin} className="mentee-login">Mentee</button>
