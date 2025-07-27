@@ -1,10 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './landingpage.css'; // Assuming you have a CSS file for styling
-import { Link } from 'react-router-dom';
-import image1 from '../assets/image-1.png'; 
-// import image2 from '../assets/image-2.jpg'; 
+import './landingpage.css'; 
+import image1 from '../assets/image-1.png';  
 
 
 function LandingPage() {
@@ -194,77 +192,6 @@ function LandingPage() {
             </div>
                         
         </div>
-
-                {/* <div className="section3">
-                    <div className="section3-content">
-                    <div className="section3-header">
-                        <h2>HEAR FROM OUR ALUMNI</h2>
-                    </div>
-
-                    <div className="section3-reviews">
-                        <div className="section3-review1">
-                            <div className="review-text">
-                                <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Quidem voluptatum sit accusantium eos mollitia ducimus nobis quod nihil. Eius nemo necessitatibus, exercitationem labore itaque expedita 
-                                officia enim veritatis maiores fugit corporis molestiae iure, dicta quis minima. Doloribus praesentium dolorum perspiciatis, 
-                                beatae asperiores tenetur nemo reiciendis vitae est ratione nostrum! Et?
-                                </p>
-                            </div>
-
-                            <div className="review-profile">
-                                <div className="review-image">
-                                    <img src={image1} alt="Image" />
-                                </div>
-                                <p className='review-name'>
-                                    John Doe<br/> Software Engineer
-                                </p>
-                            </div>
-                        </div>
-                    
-                        <div className="section3-review1">
-                            <div className="review-text">
-                                <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Quidem voluptatum sit accusantium eos mollitia ducimus nobis quod nihil. Eius nemo necessitatibus, exercitationem labore itaque expedita 
-                                officia enim veritatis maiores fugit corporis molestiae iure, dicta quis minima. Doloribus praesentium dolorum perspiciatis, 
-                                beatae asperiores tenetur nemo reiciendis vitae est ratione nostrum! Et?
-                                </p>
-                            </div>
-                            <div className="review-profile">
-                                <div className="review-image">
-                                <img src={image1} alt="Image" />
-                                </div>
-                                <p className='review-name'>
-                                    John Doe<br/> Software Engineer
-
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <div className="section3-review1">
-                            <div className="review-text">
-                                <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Quidem voluptatum sit accusantium eos mollitia ducimus nobis quod nihil. Eius nemo necessitatibus, exercitationem labore itaque expedita 
-                                officia enim veritatis maiores fugit corporis molestiae iure, dicta quis minima. Doloribus praesentium dolorum perspiciatis, 
-                                beatae asperiores tenetur nemo reiciendis vitae est ratione nostrum! Et?
-                                </p>
-                            </div>
-                            <div className="review-profile">
-                                <div className="review-image">
-                                <img src={image1} alt="Image" />
-                                </div>
-                                <div className='review-nam'>
-                                    <p className='review-name'>John Doe</p><p className='review-nam2'>Software Engineer</p> 
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    </div>
-                </div> */}
                 
 
     </div>

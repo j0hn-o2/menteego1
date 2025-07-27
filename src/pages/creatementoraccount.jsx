@@ -71,9 +71,11 @@ function CreateMentorAccount() {
 
   return (
     <div className="create-mentor-account">
+      
       <div className="creatementoraccountlogo">
-        {/* <img src={menteegologo} alt="logo" /> */}
+        <img src={menteegologo} alt="logo" />
       </div>
+
       <div className="create-mentor-content">
         <div className="create-mentor-header">
           <h1>Sign Up</h1>
@@ -153,7 +155,7 @@ function CreateMentorAccount() {
           {error && <p className="error-message">{error}</p>}
           {success && <p className="success-message">{success}</p>}
 
-          <button type="submit">Create Account</button>
+          <button className= 'create-button' type="submit">Create Account</button>
         </form>
       </div>
     </div>

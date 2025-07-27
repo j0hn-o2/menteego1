@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './loginmenteeaccount.css';
 import menteegologo from '../assets/image.png';
 
 function LoginMenteeAccount() {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
+  const [formData, setFormData] = useState({ email: '', password: '', role:'mentee'});
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -18,13 +16,13 @@ function LoginMenteeAccount() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError('');
 
     try {
       const response = await fetch('http://localhost:5000/api/mentees/login', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
@@ -32,35 +30,36 @@ function LoginMenteeAccount() {
 
       if (!response.ok) {
         setError(data.message || 'Invalid login credentials');
+        setLoading(false);
         return;
       }
 
-      // Optionally save token/session
-      localStorage.setItem('token', data.token); // if your backend returns a token
-      localStorage.setItem('mentee', JSON.stringify(data.user)); // store user info
-
-      // Navigate to dashboard or home page
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('mentee', JSON.stringify(data.user));
       navigate('/mentee-dashboard');
     } catch (err) {
       console.error(err);
       setError('Something went wrong. Please try again.');
+      setLoading(false);
     }
   };
 
   return (
     <div className="login-mentee-account">
       <div className="login-logo">
-        {/* <img src={menteegologo} alt="Mentee Logo" /> */}
+        <img src={menteegologo} alt="Mentee Logo" />
       </div>
-      <h1>Login to Your Mentee Account</h1>
-      
+
+      <h1>Login</h1>
+
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email</label>
           <input 
-            type="email" 
-            id="email" 
-            name="email" 
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
             value={formData.email}
             onChange={handleChange}
             required 
@@ -68,11 +67,12 @@ function LoginMenteeAccount() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password</label>
           <input 
-            type="password" 
-            id="password" 
-            name="password" 
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
             value={formData.password}
             onChange={handleChange}
             required 
@@ -81,8 +81,14 @@ function LoginMenteeAccount() {
 
         {error && <p className="error-message">{error}</p>}
 
-        <button type="submit">Login</button>
+        <button type="submit" disabled={loading}>
+          {loading ? <span className="spinner"></span> : 'Login'}
+        </button>
       </form>
+
+      <p className="signup-link">
+        Don’t have an account? <Link to="/creatementeeaccount">Sign up</Link>
+      </p>
     </div>
   );
 }

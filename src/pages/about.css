@@ -1,48 +1,90 @@
-.about-page{
-    /* background-color: rgb(238, 238, 238); */
-    /* padding: 50px; */
-    padding-top: 140px;
-    /* width: 1000px; */
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: center;
-
+.about-page {
+  background-color: rgb(253, 253, 253);
+  /* min-height: 100vh; */
+  padding: 60px;
+  padding-top: 190px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
 }
 
-.about-container{
-    padding: 100px;
-    display: flex;
-
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-    width: 1200px;
-    padding-top: 0px;
-    line-height: 2;
-    
+.about-container {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  max-width: 900px;
+  /* width: 100%; */
+  padding: 50px;
+  box-shadow: 0 0 5px 10px rgba(88, 87, 87, 0.05);
+  line-height: 1.5;
+  color: #333;
 }
 
-.about-container h1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3rem;
-    color: #4f46e5;
-    /* text-decoration: underline; */
-    /* text-align: center; */
-} 
-
-.about-container h2{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    /* color: #4f46e5; */
-    /* margin-top: 20px; */
+.about-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  position: relative;
+  /* text-decoration: underline; */
 }
 
-.about-container p{
-    font-family: Arial, Helvetica, sans-serif;
+.about-container h1::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 235px;
+  height: 4px;
+  background-color: #4f46e5;
+  border-radius: 2px;
+}
+
+.about-container h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.about-container p {
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.about-container p::marker {
+  color: #0d6efd;
+}
+
+.about-container p br {
+  margin-bottom: 0.5rem;
+}
+
+/* Bullet styling using ::before alternative */
+.about-container p:has(br)::before {
+  /* content: "• "; */
+  /* color: #0d6efd; */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1.5rem;
+  }
+
+  .about-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-container p {
     font-size: 1rem;
-    line-height: 1.8;
-    /* padding: 20px; */
-    color: #333; /* Darker text for better readability */
+  }
 }
-

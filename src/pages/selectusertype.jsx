@@ -34,8 +34,8 @@ function SelectUserType() {
         </div>
 
         <div className="user-type-options">
-          <button onClick={handleMentorSelection} className="user-type-button">Mentor</button>
-          <button onClick={handleMenteeSelection} className="user-type-button">Mentee</button>
+          <button onClick={handleMentorSelection} className="user-type1">Mentor</button>
+          <button onClick={handleMenteeSelection} className="user-type2">Mentee</button>
         </div>
 
         </div>

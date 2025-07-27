@@ -1,7 +1,8 @@
 .select-user-type {
-    background-color: white;
+    background-color: rgb(252, 252, 252);
     display: flex;
     flex-direction: column;
+    height: 100vh;
 
 }
 
@@ -21,17 +22,18 @@
 }
 
 .select-user-content{
-    flex: 1;
+    flex: 1.7;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;    
-    padding: 60px;
+    padding: 40px;
+    margin-bottom: 60px;
     margin-left: 400px;
     margin-right: 400px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    background-color: #fcfcfc;
+    background-color: white;
 }
 .select-user-content:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -58,9 +60,9 @@
 .select-user-text p {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #666;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .user-type-options {
@@ -68,24 +70,61 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    /* padding: 20px; */
     gap: 20px;
     flex: 1;
 }
 
-button{
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
+.user-type-options button{
+    padding: 20px;
+    font-size: 1.5rem;
+    /* border: none; */
+    border-radius: 15px;
     cursor: pointer;
-    background-color: #007bff;
-    color: white;
+    width: 150px;
+    height: 75px;
+    /* background-color: #007bff; */
+    /* color: white; */
 }
 
-button:hover {
+/* .user-type-options button:hover {
     background-color: #0056b3;
 }
-button:active {
+
+.user-type-options button:active {
     background-color: #004080;
+} */
+
+.user-type1{
+    background-color: white;
+    color: #4f46e5;
+    border: 1px solid #4f46e5;
+    font-family: 'poppins', sans-serif;
+}
+
+.user-type1:hover{
+    transform: translateY(-2px);
+    background-color: rgb(240, 240, 240);
+    transition: all 0.2s ease;
+}
+
+.user-type1:active{
+    background-color: rgb(228, 228, 228);
+}
+
+.user-type2{
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+
+}
+
+.user-type2:hover{
+    transform: translateY(-2px);
+    background-color: #3d37b9;
+    transition: all 0.2s ease;
+}
+
+.user-type2:active{
+    background-color: #262099;
 }
