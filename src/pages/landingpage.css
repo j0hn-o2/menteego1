@@ -238,7 +238,7 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
-    background-color: #f9f9ff;
+    /* background-color: #f9f9ff; */
     padding: 20px;
     border-radius: 15px;
 }

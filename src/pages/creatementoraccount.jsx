@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import menteegologo from '../assets/image.png';
 import './creatementoraccount.css';
 
@@ -14,6 +15,8 @@ function CreateMentorAccount() {
 
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,6 +31,8 @@ function CreateMentorAccount() {
       setSuccess('');
       return;
     }
+
+    setLoading(true);
 
     try {
       const response = await fetch('http://localhost:5000/api/mentees', {
@@ -45,6 +50,7 @@ function CreateMentorAccount() {
       });
 
       const data = await response.json();
+      setLoading(false);
 
       if (!response.ok) {
         setError(data.message || 'Failed to create account');
@@ -52,26 +58,29 @@ function CreateMentorAccount() {
       } else {
         setSuccess('Account created successfully!');
         setError('');
-        // Optionally reset form
         setFormData({
           first_name: '',
           last_name: '',
           email: '',
           password: '',
           confirm_password: '',
-          role: 'mentee',
+          role: 'mentor',
         });
+
+        setTimeout(() => {
+          navigate('/loginmentor');
+        }, 1500);
       }
     } catch (err) {
       console.error(err);
       setError('An error occurred. Please try again.');
       setSuccess('');
+      setLoading(false);
     }
   };
 
   return (
     <div className="create-mentor-account">
-      
       <div className="creatementoraccountlogo">
         <img src={menteegologo} alt="logo" />
       </div>
@@ -79,12 +88,13 @@ function CreateMentorAccount() {
       <div className="create-mentor-content">
         <div className="create-mentor-header">
           <h1>Sign Up</h1>
+          <p className="sub-text">Inspire and guide students through mentorship</p>
         </div>
 
         <form className="create-mentor-form" onSubmit={handleSubmit}>
           <div className="user-name">
-            <div>
-              <label className='first-name'>First Name:</label>
+            <div className="input-group">
+              <label>First Name:</label>
               <input
                 type="text"
                 name="first_name"
@@ -93,8 +103,8 @@ function CreateMentorAccount() {
                 required
               />
             </div>
-            <div>
-              <label className='last-name'>Last Name:</label>
+            <div className="input-group">
+              <label>Last Name:</label>
               <input
                 type="text"
                 name="last_name"
@@ -106,7 +116,7 @@ function CreateMentorAccount() {
           </div>
 
           <div className="email-role">
-            <div>
+            <div className="input-group">
               <label>Email:</label>
               <input
                 type="email"
@@ -117,14 +127,14 @@ function CreateMentorAccount() {
               />
             </div>
 
-            <div>
+            <div className="input-group">
               <label>Role:</label>
               <input type="text" name="role" value={formData.role} disabled />
             </div>
           </div>
 
           <div className="password1">
-            <div>
+            <div className="input-group">
               <label>Password:</label>
               <input
                 type="password"
@@ -134,7 +144,7 @@ function CreateMentorAccount() {
                 required
               />
             </div>
-            <div>
+            <div className="input-group">
               <label>Confirm Password:</label>
               <input
                 type="password"
@@ -146,16 +156,24 @@ function CreateMentorAccount() {
             </div>
           </div>
 
-          <div>
-            <p className='privacy-policy'>
-              By signing up, you agree to our <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.
-            </p>
-          </div>
+          <p className='privacy-policy'>
+            By signing up, you agree to our <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.
+          </p>
 
           {error && <p className="error-message">{error}</p>}
           {success && <p className="success-message">{success}</p>}
 
-          <button className= 'create-button' type="submit">Create Account</button>
+          <div className="create-button">
+            <button type="submit" disabled={loading}>
+              {loading ? 'Creating Account...' : 'Create Account'}
+            </button>
+          </div>
+
+          <div className="already-have-account">
+            <p>
+              Already have an account? <Link to="/loginmentor">Log in</Link>
+            </p>
+          </div>
         </form>
       </div>
     </div>
@@ -163,3 +181,4 @@ function CreateMentorAccount() {
 }
 
 export default CreateMentorAccount;
+
