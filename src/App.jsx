@@ -14,6 +14,7 @@ import LoginMentorAccount from './pages/loginmentoraccount.jsx';
 import LoginMenteeAccount from './pages/loginmenteeaccount.jsx';
 import MenteeDashboard from './pages/menteedashboard.jsx';
 import MentorDashboard from './pages/mentordashboard.jsx';
+import Messages from './pages/messages.jsx';
 
 function AppContent() {
   const location = useLocation();
@@ -27,7 +28,9 @@ function AppContent() {
     '/loginmentor',
     '/loginmentee',
     '/dashboard/mentee',
-    '/dashboard/mentor'
+    '/dashboard/mentor',
+    '/dashboard/messages'
+
   ];
 
   const hideFooterRoutes = [
@@ -39,7 +42,8 @@ function AppContent() {
     '/creatementoraccount',
     '/creatementeeaccount',
     '/dashboard/mentee',
-    '/dashboard/mentor'
+    '/dashboard/mentor',
+    '/dashboard/messages'
   ];
 
   const hideNavbar = hideNavbarRoutes.includes(location.pathname);
@@ -60,6 +64,8 @@ function AppContent() {
         <Route path="/loginmentee" element={<LoginMenteeAccount />} />
         <Route path="/dashboard/mentee" element={<MenteeDashboard />} />
         <Route path="/dashboard/mentor" element={<MentorDashboard/>}/>
+        <Route path="/dashboard/messages" element={<Messages/>}/>
+
 
         {/* Add other routes as needed */}
       </Routes>

@@ -1,6 +1,7 @@
 import React from 'react';
 import './menteedashboard.css';
 import { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -30,7 +31,7 @@ function MenteeDashboard() {
           <ul>
             <li className="active">Dashboard</li>
             <li>My Mentor</li>
-            <li>Messages</li>
+            <li><Link to='/dashboard/messages'> Messages</Link></li>
             <li>Resources</li>
             <li>Edit Profile</li>
           </ul>
