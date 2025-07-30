@@ -33,6 +33,8 @@ function LoginMenteeAccount() {
         setLoading(false);
         return;
       }
+      
+      localStorage.setItem('first_name', data.user.first_name);
 
       localStorage.setItem('token', data.token);
       localStorage.setItem('mentee', JSON.stringify(data.user));

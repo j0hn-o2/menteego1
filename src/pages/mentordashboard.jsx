@@ -1,9 +1,22 @@
 import React from 'react';
 import './mentordashboard.css';
+import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function MentorDashboard() {
   const navigate = useNavigate();
+
+  const [firstName, setFirstName] = useState('');
+
+    useEffect(() => {
+    const storedName = localStorage.getItem('first_name');
+    if (storedName) {
+        setFirstName(storedName);
+    } else {
+        navigate('/loginmentoraccount');
+    }
+    }, []);
+
 
   const handleLogout = () => {
     localStorage.removeItem('token'); // or remove mentor info
@@ -28,7 +41,7 @@ function MentorDashboard() {
 
       <main className="main-content">
         <header className="topbar">
-          <h1>Welcome, Mentor!</h1>
+          <h1>Welcome, {firstName ? firstName.toUpperCase() : ''}!</h1>
         </header>
 
         <section className="content">

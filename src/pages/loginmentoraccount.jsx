@@ -14,6 +14,7 @@ function LoginMentorAccount() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -32,6 +33,8 @@ function LoginMentorAccount() {
         setLoading(false);
         return;
       }
+      
+      localStorage.setItem('first_name', data.user.first_name);
 
       localStorage.setItem('token', data.token);
       localStorage.setItem('mentor', JSON.stringify(data.user));

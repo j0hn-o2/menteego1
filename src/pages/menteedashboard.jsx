@@ -1,9 +1,21 @@
 import React from 'react';
 import './menteedashboard.css';
+import { useState,useEffect } from 'react';
+
 import { useNavigate } from 'react-router-dom';
 
 function MenteeDashboard() {
   const navigate = useNavigate();
+  const [firstName, setFirstName] = useState('');
+  
+      useEffect(() => {
+      const storedName = localStorage.getItem('first_name');
+      if (storedName) {
+          setFirstName(storedName);
+      } else {
+          navigate('/loginmentoraccount');
+      }
+      }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('token'); // or remove user info
@@ -28,7 +40,7 @@ function MenteeDashboard() {
 
       <main className="main-content">
         <header className="topbar">
-          <h1>Welcome, Mentee!</h1>
+          <h1>Welcome, {firstName ? firstName.toUpperCase() : ''}!</h1>
         </header>
 
         <section className="content">
