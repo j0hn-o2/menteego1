@@ -35,7 +35,7 @@ function CreateMentorAccount() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/mentees', {
+      const response = await fetch('http://localhost/menteego_backend/auth/register.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

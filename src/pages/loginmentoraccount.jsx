@@ -20,7 +20,7 @@ function LoginMentorAccount() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/mentors/login', {
+      const response = await fetch('http://localhost/menteego_backend/auth/login.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
