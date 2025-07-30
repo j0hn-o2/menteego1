@@ -20,7 +20,7 @@ function LoginMenteeAccount() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/mentees/login', {
+      const response = await fetch('http://localhost/menteego_backend/auth/login.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -36,7 +36,7 @@ function LoginMenteeAccount() {
 
       localStorage.setItem('token', data.token);
       localStorage.setItem('mentee', JSON.stringify(data.user));
-      navigate('/mentee-dashboard');
+      navigate('/dashboard/mentee');
     } catch (err) {
       console.error(err);
       setError('Something went wrong. Please try again.');

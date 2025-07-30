@@ -35,7 +35,7 @@ function LoginMentorAccount() {
 
       localStorage.setItem('token', data.token);
       localStorage.setItem('mentor', JSON.stringify(data.user));
-      navigate('/mentor-dashboard');
+      navigate('/dashboard/mentor');
     } catch (err) {
       console.error(err);
       setError('Something went wrong. Please try again.');
