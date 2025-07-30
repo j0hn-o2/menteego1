@@ -33,7 +33,7 @@ function MenteeDashboard() {
             <li>My Mentor</li>
             <li><Link to='/dashboard/messages'> Messages</Link></li>
             <li>Resources</li>
-            <li>Edit Profile</li>
+            <li><Link to='/dashboard/profile'>Profile</Link></li>
           </ul>
         </nav>
         <button onClick={handleLogout} className="logout-btn">Logout</button>
