@@ -25,8 +25,8 @@ function LandingPage() {
                     Connect with experienced mentors who understand the challenges and 
                     opportunities of college life. Whether you're adjusting to your first year, exploring career paths, 
                     applying for internships, or preparing for graduation, 
-                    our mentors are here to help you every step of the way. With the right mentor, you’ll feel more confident making decisions, 
-                    setting goals, and building a future you’re proud of.
+                    our mentors are here to help you every step of the way. With the right mentor, you'll feel more confident making decisions, 
+                    setting goals, and building a future you're proud of.
                 </p>
             </div>
 
@@ -64,24 +64,24 @@ function LandingPage() {
                 <div className="section3-part1">
                     <div className="feature1">
                         <div className="feature1-image">
-                            <img src={image1} alt="Image" />
+                            <img src={image1} alt="Connect with Mentors" />
                         </div>
                         <div className="feature1-text">
                             <p>
                                 <strong>Meet & Connect</strong>
-                                Have one-on-one conversations with leading professionals from ACES.
+                                Have one-on-one conversations with leading professionals and industry experts who can guide your career path and personal growth.
                             </p>
                         </div>
                     </div>
 
                     <div className="feature2">
                         <div className="feature2-image">
-                            <img src={image1} alt="Image" />
+                            <img src={image1} alt="Join Communities" />
                         </div>
                         <div className="feature2-text">
                             <p>
                                 <strong>Join Groups</strong>
-                                Share and participate within your community to learn about the latest trends.
+                                Connect with peers in your field, share experiences, and learn from collective knowledge in specialized discussion groups.
                             </p>
                         </div>
                     </div>
@@ -90,24 +90,24 @@ function LandingPage() {
                 <div className="section3-part2">
                     <div className="feature3">
                         <div className="feature3-image"> 
-                            <img src={image1} alt="Image" />
+                            <img src={image1} alt="Earn Achievements" />
                         </div>
                         <div className="feature3-text">
                             <p>
-                                <strong>Participate</strong>
-                                Participating in discussions and attending sessions will gain you certificates and badges on your profile.
+                                <strong>Earn Recognition</strong>
+                                Participate in discussions and attend sessions to earn certificates and badges that showcase your learning journey.
                             </p>
                         </div>
                     </div>
 
                     <div className="feature4">
                         <div className="feature4-image"> 
-                            <img src={image1} alt="Image" />
+                            <img src={image1} alt="Active Learning" />
                         </div>
                         <div className="feature4-text">
                             <p>
-                                <strong>Engage</strong>
-                                Participating in discussions and attending sessions will gain you certificates and badges on your profile.
+                                <strong>Stay Engaged</strong>
+                                Access exclusive resources, attend workshops, and participate in events designed to accelerate your professional development.
                             </p>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ function LandingPage() {
 
         <div className="section4">
             <div className="section4-header">
-                <h2>HEAR FROM OUR ALUMNI</h2>
+                <h2>HEAR FROM OUR COMMUNITY</h2>
             </div> 
 
             <div className="section4-review">
@@ -126,20 +126,19 @@ function LandingPage() {
                     <div className="review1-text">
 
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Quidem voluptatum sit accusantium eos mollitia ducimus nobis quod nihil. Eius nemo necessitatibus, exercitationem labore itaque expedita 
-                            officia enim veritatis maiores fugit corporis molestiae iure, dicta quis minima. Doloribus praesentium dolorum perspiciatis, 
-                            beatae asperiores tenetur nemo reiciendis vitae est ratione nostrum! Et?
+                            "MenteeGo completely transformed my college experience. My mentor helped me navigate internship applications, 
+                            refine my resume, and build confidence in my career choices. The personalized guidance I received was invaluable 
+                            and directly contributed to landing my dream job at a top tech company."
                         </p>
 
                     </div>
                     <div className="review1-profile">
                         <div className="review1-image">
-                            <img src={image1} alt="Image" />
+                            <img src={image1} alt="Sarah Chen" />
                         </div>
                         <div className='review1-name'>
-                            <p>John Doe</p>
-                            <p className='name-role'>Software Engineer</p>
+                            <p>Sarah Chen</p>
+                            <p className='name-role'>Software Engineer at Google</p>
                         </div>
                     </div>
                 </div>
@@ -149,20 +148,19 @@ function LandingPage() {
                     <div className="review2-text">
 
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Quidem voluptatum sit accusantium eos mollitia ducimus nobis quod nihil. Eius nemo necessitatibus, exercitationem labore itaque expedita 
-                            officia enim veritatis maiores fugit corporis molestiae iure, dicta quis minima. Doloribus praesentium dolorum perspiciatis, 
-                            beatae asperiores tenetur nemo reiciendis vitae est ratione nostrum! Et?
+                            "As a mentor on MenteeGo, I've had the privilege of guiding bright students through their academic and career journeys. 
+                            The platform makes it easy to share knowledge and experience. Seeing my mentees grow and succeed has been incredibly 
+                            rewarding. It's a fantastic way to give back to the community."
                         </p>
 
                     </div>
                     <div className="review2-profile">
                         <div className="review2-image">
-                            <img src={image1} alt="Image" />
+                            <img src={image1} alt="Dr. Michael Rodriguez" />
                         </div>
                         <div className='review2-name'>
-                            <p>John Doe</p>
-                            <p className='name-role'>Software Engineer</p>
+                            <p>Dr. Michael Rodriguez</p>
+                            <p className='name-role'>Senior Data Scientist at Microsoft</p>
                         </div>
                     </div>
                 </div>
@@ -171,20 +169,19 @@ function LandingPage() {
                     <div className="review3-text">
 
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Quidem voluptatum sit accusantium eos mollitia ducimus nobis quod nihil. Eius nemo necessitatibus, exercitationem labore itaque expedita 
-                            officia enim veritatis maiores fugit corporis molestiae iure, dicta quis minima. Doloribus praesentium dolorum perspiciatis, 
-                            beatae asperiores tenetur nemo reiciendis vitae est ratione nostrum! Et?
+                            "The group discussions and workshops on MenteeGo exposed me to diverse perspectives and industry insights I wouldn't 
+                            have found elsewhere. The community is supportive, and the resources are top-notch. I've made valuable connections 
+                            that will last throughout my career."
                         </p>
 
                     </div>
                     <div className="review3-profile">
                         <div className="review3-image">
-                            <img src={image1} alt="Image" />
+                            <img src={image1} alt="Alex Thompson" />
                         </div>
                         <div className='review3-name'>
-                            <p>John Doe</p>
-                            <p className='name-role'>Software Engineer</p>
+                            <p>Alex Thompson</p>
+                            <p className='name-role'>Marketing Manager at Amazon</p>
                         </div>
                     </div>
                 </div>

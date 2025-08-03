@@ -83,6 +83,46 @@
   outline: none;
 }
 
+/* Password input container styles */
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding-right: 40px; /* Space for the toggle button */
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  min-height: 30px;
+}
+
+.password-toggle-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.password-toggle-btn:focus {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
 .privacy-policy {
   font-size: 0.85rem;
   color: #666;
