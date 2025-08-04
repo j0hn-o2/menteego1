@@ -1,53 +1,59 @@
 .about-page {
-  /* background-color: rgb(253, 253, 253); */
-  /* min-height: 100vh; */
   padding: 60px;
   padding-top: 190px;
   display: flex;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
+  background-color: #f9f9ff;
 }
 
 .about-container {
   background-color: #ffffff;
   border-radius: 1rem;
   max-width: 900px;
-  /* width: 100%; */
+  width: 100%;
   padding: 50px;
-  box-shadow: 1px 2px 5px 10px rgba(24, 24, 24, 0.05);
-  line-height: 1.5;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
   color: #333;
+  line-height: 1.6;
 }
 
 .about-container h1 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #4f46e5;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   text-align: center;
   position: relative;
-  /* text-decoration: underline; */
 }
 
-.about-container h1::after{
+.about-container h1::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 235px;
+  width: 180px;
   height: 4px;
   background-color: #4f46e5;
   border-radius: 2px;
 }
 
+.section {
+  margin-top: 2rem;
+}
+
+.section .icon {
+  font-size: 2rem;
+  color: #4f46e5;
+  margin-bottom: 0.5rem;
+}
+
 .about-container h2 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #333;
-  margin-top: 2rem;
+  color: #4f46e5;
   margin-bottom: 0.8rem;
-  text-align: left;
 }
 
 .about-container p {
@@ -56,21 +62,58 @@
   text-align: justify;
 }
 
-.about-container p::marker {
-  color: #0d6efd;
+.about-container ul {
+  padding-left: 0;
+  list-style: none;
 }
 
-.about-container p br {
-  margin-bottom: 0.5rem;
+.about-container ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  color: #333;
 }
 
-/* Bullet styling using ::before alternative */
-.about-container p:has(br)::before {
-  /* content: "• "; */
-  /* color: #0d6efd; */
+.bullet-icon {
+  color: #4f46e5;
+  margin-right: 0.6rem;
+  font-size: 1.2rem;
 }
 
-/* Responsive design */
+/* CTA Buttons */
+.cta-buttons {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  background-color: #4f46e5;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #3b39c5;
+}
+
+.cta-btn.alt {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+.cta-btn.alt:hover {
+  background-color: #c7d2fe;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .about-container {
     padding: 1.5rem;
@@ -81,10 +124,16 @@
   }
 
   .about-container h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
-  .about-container p {
+  .about-container p,
+  .about-container ul li {
     font-size: 1rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+    text-align: center;
   }
 }
